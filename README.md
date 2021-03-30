@@ -27,8 +27,7 @@ The app is available [here](https://lechmere.github.io/Project-2/).
 - react-router-dom
 
 ## Demonstration of the App Flow
-
-
+<img width="1440" alt="Project2-Screenshot" src="https://user-images.githubusercontent.com/71281526/113062447-ac3c4c00-91ab-11eb-8900-5ce162a26de0.png">
 The Quiz has three question types: Is N.N. Good Or Bad, Which House Does N.N. Belong To, and What Does This Spell Do. After each question, a toast notifies player whether they were correct or false and displays their current score. The quiz goes on for ten questions, when the quiz is over player lands on a module displaying their result and a button to redirect them to home.
 
 ## Process
