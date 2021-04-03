@@ -34,7 +34,7 @@ The app allows for users to find the weather forecast in any city around the wor
 ## Process
 We began our project by siphoning through free APIs on the internet. Eventually we settled on the OpenWeatherMapAPI that lists the datasets of the weather forecast of over 200,000 different cities. Next, we inspected the API by hooking into it with Insomnia REST client. After, the inspection we decided to build an App that could search through the cities within this data and provide the relevant forecasts. 
 
-- First, we created the app's wireframes:PICTURE
+- First, we created the app's wireframes.
 - Secondly, we planned and wrote the pseudo code.
 - Thirdly, we used VSCode Liveshare to pair program basic components in React (Home, Navbar, Forecast page) and the BrowserRouter using react-router-dom. 
 - Finally, we seperated to individually code the search logic - this took longer than anticipated as we had to switch between Apis to find one that allowed us to filter through cities. 
@@ -43,6 +43,8 @@ To style our page, we combined Bulma CSS Framework and CSS. This approach was us
 
 
 ## Search Logic
+<img width="1440" alt="search-bar" src="https://user-images.githubusercontent.com/71281526/113476125-60bac400-9471-11eb-9a20-e6e248964059.png">
+
 The search bar logic uses useStates to filter the city through the search mechanism. This occurs by using the filter function within the api, filtering to find the filteredCity which is the given city when the value entered in to the search (the cityFilter) is included in the Api's city name (search.main.name). The value of the search bar is tracked using a useState that starts as cityFilter but updates with every keystroke to updateCityFilter. When the search button is clicked, the page refreshes to the cityFilter's page to present the results.
 
     // SEARCH BAR FILTER CITY LOGIC ---------------------------------------------
@@ -69,6 +71,8 @@ console.log(api)
     return filteredCity
   }
 ```
+<img width="1440" alt="search-result" src="https://user-images.githubusercontent.com/71281526/113476132-66b0a500-9471-11eb-8f0e-b4e298044cf1.png">
+
 The SearchResult requirs the use of props, params and useState to work. The searchId from the props, is entered in to the Api url of the axios get so the right city database is received, presenting the forecast. The search result page also creates a loading page if the search is not found.
 
       // SEARCH RESULT & LOADING LOGIC ---------------------------------------------
